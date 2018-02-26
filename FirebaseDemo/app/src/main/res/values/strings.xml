@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FirebaseDemo</string>
+    <string name="loading">Loading</string>
+    <string name="permission_title">Allow access?</string>
+    <string name="permission_denied_title">Needs Permission</string>
+    <string name="permission_text">This feature needs to access the device\'s %s. Turn on this permission from your app settings.</string>
+    <string name="permission_deny_message">This feature needs to access the device\'s %s. You must grant the app permission to proceed.</string>
+    <string name="permission_no">Not Now</string>
+    <string name="permission_camera">camera</string>
+    <string name="permission_location">location</string>
+    <string name="permission_toast">Tap Permission, then turn on %s.</string>
+    <string name="scanner_hint">Center barcode and hold it steady</string>
+    <string name="scanner_screen_title">Scan barcode</string>
+    <string name="manual_entry_btn">Look up item</string>
+</resources>

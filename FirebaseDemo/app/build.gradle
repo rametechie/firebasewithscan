@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.firebase.demo"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+repositories {
+    google()
+    jcenter()
+    maven { url 'http://nexus.ubudu.com:8081/nexus/content/groups/public/' }
+    maven { url 'https://maven.google.com' }
+    maven { url 'http://mobilebuild.homeoffice.wal-mart.com:8081/nexus/content/repositories/hosted' }
+    maven { url 'http://mobilebuild.homeoffice.wal-mart.com:8081/nexus/content/repositories/releases' }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'com.firebaseui:firebase-ui-auth:3.2.1'
+    implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
+
+    implementation 'com.firebaseui:firebase-ui-database:3.2.1'
+    implementation 'com.google.zxing:core:3.3.0'
+
+    implementation 'me.dm7.barcodescanner:zxing:1.9.3'
+
+    //WALMART
+    implementation 'com.walmartlabs.electrode:electrode-core-impl:1.9.0'
+    implementation 'com.walmartlabs.electrode:electrode-core-api:1.9.0'
+
+}
+apply plugin: 'com.google.gms.google-services'
